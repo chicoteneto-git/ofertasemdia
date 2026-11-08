@@ -1,9 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.mlstatic.com",
+      },
+      {
+        protocol: "http",
+        hostname: "**.mlstatic.com",
+      },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {
