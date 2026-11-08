@@ -5,7 +5,7 @@ interface StructuredDataProps {
 }
 
 export function StructuredData({ deals }: StructuredDataProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ofertasmais.com.br";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ofertasemdia.vercel.app";
 
   // Schema.org WebSite & SearchAction
   const websiteSchema = {
